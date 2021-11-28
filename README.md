@@ -8,7 +8,6 @@ This project is a web application (SPA) for veterinarians.
 
 - [Description](#description)
 - [How To Use](#how-to-use)
-- [Author Info](#author-info)
 
 ---
 
