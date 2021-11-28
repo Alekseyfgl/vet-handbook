@@ -40,18 +40,22 @@ check restrictions on these drugs. The app has a tool for feedback via email wit
 
 #### API Reference
 
-Copy link 
+1. Copy link --> 
+
 ```html
-    https://github.com/Alekseyfgl/vet-handbook.git
+   git clone https://github.com/Alekseyfgl/vet-handbook.git
 ```
 
-Open console  --> paste into console
+Сhoose folder --> Open console  --> paste into console
+
+
+2. Copy and paste console
 
 ```html
     npm start
 ```
 
-open your browser and paste this link
+3. Open your browser and paste this link
 
 ```html
     http://localhost:5000/
