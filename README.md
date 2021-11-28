@@ -36,23 +36,34 @@ check restrictions on these drugs. The app has a tool for feedback via email wit
 
 #### Installation
 
-
 1. Copy link  
 
 ```html
    git clone https://github.com/Alekseyfgl/vet-handbook.git
 ```
 
-Сhoose folder --> Open console  --> paste into console
+2. Сhoose folder --> Open console  --> paste link into the console
 
+3. Write in the console
 
-2. Copy and paste console
+```html
+   cd "vet-handbook"
+```
+
+4. Write in the console
+
+```html
+    cd "api"
+    npm install
+```
+
+5. Write in the console
 
 ```html
     npm start
 ```
 
-3. Open your browser and paste this link
+6. Open your browser and paste this link
 
 ```html
     http://localhost:5000/
