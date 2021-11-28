@@ -22,6 +22,8 @@ check restrictions on these drugs. The app has a tool for feedback via email wit
 - HTML
 - CSS
 - SCSS
+- Responsive and cross-browser coding
+- Animation
 - JavaScript (ES6)
 - NodeJS
 - Express js
