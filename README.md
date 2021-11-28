@@ -2,9 +2,6 @@
 
 This project is a web application (SPA) for veterinarians.
 
-> 
-
-
 ---
 
 ### Table of Contents
@@ -38,9 +35,8 @@ check restrictions on these drugs. The app has a tool for feedback via email wit
 
 #### Installation
 
-#### API Reference
 
-1. Copy link --> 
+1. Copy link  
 
 ```html
    git clone https://github.com/Alekseyfgl/vet-handbook.git
@@ -62,7 +58,6 @@ check restrictions on these drugs. The app has a tool for feedback via email wit
 ```
 
 [Back To The Top](#vet-handbook)
-
 
 
 
