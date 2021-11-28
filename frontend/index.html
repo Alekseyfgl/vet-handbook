@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinary handbook</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script defer type="module" src="./js/app.js"></script>
+    
+    <script src="https://kit.fontawesome.com/b435e0337f.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./img/logo/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="page-container">
+
+        <header>
+            <div class="wrapper wr-header">
+                <div href="#" class="wr-logo">
+                    <img src="./img/logo/logo.png" alt="logo-img">
+                </div>
+                <form>
+                    <input type="text" id="search" placeholder="Название препарата" autocomplete="off">
+                    <button id="resetSearch">×</button>
+                </form>
+            </div>
+        </header>
+
+        <main>
+            <div class="wrapper wr-main">
+                <ul class="list">
+                    <svg id="hamsterwheel" class="hamsterwheel" viewBox="0 0 100 100"
+                        preserveAspectRatio="xMinYMin meet" stroke="currentColor" color="#687386">
+                        <g class="wheel" fill="none" stroke-width="4" stroke-linecap="butt" transform-origin="center"
+                            opacity="0.5">
+                            <circle class="rim" cx="50" cy="50" r="46" stroke-width="8" />
+                            <line class="spokes" x1="50" y1="50" x2="96" y2="50" />
+                            <line class="spokes" x1="50" y1="50" x2="27" y2="9.98" />
+                            <line class="spokes" x1="50" y1="50" x2="27" y2="90.02" />
+                        </g>
+                        <g class="hamster" fill="currentColor" stroke-width="0" stroke-linecap="round"
+                            transform-origin="center">
+                            <circle class="fur tail" cx="20" cy="63" r="2" />
+                            <circle class="fur ear" cx="62" cy="52" r="4" />
+                            <line x1="71" y1="74" x2="76" y2="79" class="fur paws fore" stroke-width="4"
+                                transform-origin="center" />
+                            <line x1="28" y1="82" x2="33" y2="77" class="fur paws hind" stroke-width="4"
+                                transform-origin="center" />
+                            <path class="fur body"
+                                d="M 82 53 c -5 -4 -13 -4 -16 -3 l -6 4 c -2 1 -11 5 -25 1 -1 -1 -11 -1 -15 8 a 13 13 0 0 0 4 16 c 25 17 49 4 58 -10 s 2 -15 0 -16 z" />
+                            <circle class="eye" cx="73" cy="55" r="2.5" color="#f7fafc" />
+                        </g>
+                    </svg>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p class="footer__info">
+                &copy; All Rights Reserved,  2021
+            </p>
+            <p>Maksutov Aleksey</p>
+        </footer>
+    </div>
+</body>
+
+</html>

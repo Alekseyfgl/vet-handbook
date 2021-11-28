@@ -1,0 +1,455 @@
+@import "reset";
+
+$fs-mobile: 16px;
+$fs-item: 16px;
+
+%btn-style {
+    display: inline-block;
+    background: linear-gradient(to left, #efefef 0%, #fff, #efefef);
+    border: 2px solid #c0c0c0;
+    color: #506a6b;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: 0.4s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    &:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+// *****prilouder*******
+.hamsterwheel {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 200px;
+}
+.hamsterwheel > .wheel {
+    color: #09815c;
+    opacity: 0.5;
+    animation: 2s linear infinite wheel;
+}
+@keyframes wheel {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.hamsterwheel > .hamster {
+    transform: rotate(20deg);
+    animation: 1.5s ease-in-out infinite alternate hamster;
+}
+@keyframes hamster {
+    to {
+        transform: rotate(-20deg);
+    }
+}
+.hamsterwheel > .hamster > .paws {
+    animation: 0.25s ease-in-out infinite alternate paws;
+}
+@keyframes paws {
+    50% {
+        transform: translateY(2px) rotate(-10deg);
+    }
+}
+.hamsterwheel > .hamster > .eye {
+    animation: 2s linear infinite alternate eye;
+}
+@keyframes eye {
+    0% {
+        color: #f7fafc;
+    }
+    95% {
+        color: #f7fafc;
+    }
+    100% {
+        color: #bb5506;
+    }
+}
+.hamsterwheel > .hamster > .fur {
+    color: #bb5506;
+}
+
+// ********spiner******
+.spiner-svg {
+    display: block;
+    margin: 0 auto;
+    height: 60px;
+}
+
+//********active***********
+.hide {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.closeItem {
+    display: none;
+}
+
+//for body
+.block {
+    overflow: hidden;
+}
+// --------------
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    min-width: 319px;
+}
+
+//*******setting for input*************
+input {
+    height: 36px;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid #b1b0b0;
+    &:focus {
+        border: 1px solid #000;
+    }
+}
+// *****************
+
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background: linear-gradient(90deg, #61bddf, #eac761);
+}
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+// ************** HEADER ******************
+.wr-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    form {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+}
+#resetSearch {
+    flex: 0 0 auto;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    background-color: rgb(59, 53, 53);
+    width: 36px;
+    height: 36px;
+    &:hover {
+        transition: 0.3s;
+        color: rgb(255, 0, 0);
+    }
+}
+#btn-previous {
+    @extend %btn-style;
+}
+.wr-logo {
+    width: 95px;
+    height: 80px;
+    margin-right: 6%;
+    flex: 0 0 auto;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+// =======================================================
+
+// ****************** MAIN *****************************
+main {
+    flex: 1 0 auto;
+    background-color: #f7f7f7;
+}
+ul {
+    padding-top: 130px;
+}
+li {
+    padding: 10px 30px;
+    background: linear-gradient(to left, #efefef 0%, #fff, #efefef);
+    border: 2px solid #c0c0c0;
+    color: #506a6b;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    &.item-ative {
+        cursor: default;
+    }
+}
+
+.inform {
+    padding-top: 10px;
+    button {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 6px 6px 6px 14px;
+        text-align: left;
+        font-size: inherit;
+        margin-bottom: 10px;
+        background-color: rgb(189, 170, 170);
+        border-radius: 10px;
+
+        &::after {
+            position: absolute;
+            top: 6px;
+            right: 40px;
+            content: url(../img/svg/arrow-up.svg);
+            width: 20px;
+            height: 20px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
+    }
+    button.open {
+        margin-bottom: 0;
+        &::after {
+            transform: rotateX(180deg);
+        }
+    }
+
+    div {
+        height: 0;
+        overflow: hidden;
+        transition-property: padding-top, padding-bottom, opacity;
+        transition-duration: 0.4s, 0.1s;
+        transition-timing-function: linear, linear;
+        opacity: 0;
+        p {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    div.open-content-tab {
+        height: min-content;
+        padding: 16px;
+        opacity: 1;
+    }
+
+    .dosageInput {
+        width: 60px;
+        padding: 10px;
+        font-size: 15px;
+        border: 1px solid #b1b0b0;
+
+        &:focus {
+            border: 1px solid #000;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #61bddf, #eac761);
+}
+
+// *****message*******
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 30px;
+    bottom: 5%;
+    height: 60px;
+    width: 60px;
+    font-size: 22px;
+    border-radius: 50%;
+    background-color: rgb(31, 30, 30);
+    color: #f2ebeb;
+    cursor: pointer;
+}
+
+.show-message {
+    margin-top: 120px;
+
+    div {
+        position: relative;
+        margin-bottom: 14px;
+    }
+
+    input {
+        border: 1px solid #b1b0b0;
+        &:focus {
+            border: 1px solid #000;
+        }
+    }
+    button {
+        display: block;
+        width: 100%;
+    }
+
+    .check-message {
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        top: 47%;
+        right: 30px;
+        height: 25px;
+        width: 25px;
+
+        font-size: 16px;
+        border-radius: 50%;
+        color: #efefef;
+    }
+    .check-input {
+        background-color: rgb(55, 194, 0);
+        &.active {
+            display: flex;
+        }
+    }
+    .cross-input {
+        background-color: rgb(248, 6, 6);
+        &.active {
+            display: flex;
+        }
+    }
+
+    textarea {
+        height: 160px;
+        width: 100%;
+        font-size: 20px;
+        padding: 10px;
+        resize: none;
+        border: 1px solid #b1b0b0;
+        &:focus {
+            border: 1px solid #000;
+        }
+    }
+
+    button {
+        @extend %btn-style;
+    }
+}
+
+.modal-wr {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+   
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+    .modal {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 500px;
+        background-color: rgb(247, 247, 247);
+        border: 1px solid #000;
+        border-radius: 8px;
+        padding: 30px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 55;
+        p {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        button {
+            @extend %btn-style;
+        }
+    }
+}
+
+.error{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    p {
+        font-size: 30px;
+    }
+}
+// ****************************
+
+// **********MEDIA*********************
+@media screen and (max-width: 460px) {
+    .page-container {
+        font-size: $fs-mobile;
+    }
+
+    .wr-logo {
+        width: 75px;
+        height: 65px;
+    }
+
+    #search {
+        font-size: $fs-mobile;
+    }
+
+    ul {
+        padding-top: 108px;
+    }
+
+    footer {
+        height: 46px;
+        p {
+            font-size: $fs-item;
+        }
+    }
+
+    .show-message {
+        margin-top: 110px;
+        margin-bottom: 20px;
+
+        [placeholder] {
+            font-size:  $fs-mobile;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        div {
+            margin-bottom: 8px;
+        }
+    }
+    
+}

@@ -1,0 +1,494 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1.3;
+  font-size: 18px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a :visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.modal-wr .modal button, .show-message button, #btn-previous {
+  display: inline-block;
+  background: linear-gradient(to left, #efefef 0%, #fff, #efefef);
+  border: 2px solid #c0c0c0;
+  color: #506a6b;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: 0.4s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.modal-wr .modal button:hover, .show-message button:hover, #btn-previous:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hamsterwheel {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 200px;
+}
+
+.hamsterwheel > .wheel {
+  color: #09815c;
+  opacity: 0.5;
+  animation: 2s linear infinite wheel;
+}
+
+@keyframes wheel {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.hamsterwheel > .hamster {
+  transform: rotate(20deg);
+  animation: 1.5s ease-in-out infinite alternate hamster;
+}
+
+@keyframes hamster {
+  to {
+    transform: rotate(-20deg);
+  }
+}
+.hamsterwheel > .hamster > .paws {
+  animation: 0.25s ease-in-out infinite alternate paws;
+}
+
+@keyframes paws {
+  50% {
+    transform: translateY(2px) rotate(-10deg);
+  }
+}
+.hamsterwheel > .hamster > .eye {
+  animation: 2s linear infinite alternate eye;
+}
+
+@keyframes eye {
+  0% {
+    color: #f7fafc;
+  }
+  95% {
+    color: #f7fafc;
+  }
+  100% {
+    color: #bb5506;
+  }
+}
+.hamsterwheel > .hamster > .fur {
+  color: #bb5506;
+}
+
+.spiner-svg {
+  display: block;
+  margin: 0 auto;
+  height: 60px;
+}
+
+.hide {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.closeItem {
+  display: none;
+}
+
+.block {
+  overflow: hidden;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 319px;
+}
+
+input {
+  height: 36px;
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid #b1b0b0;
+}
+input:focus {
+  border: 1px solid #000;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background: linear-gradient(90deg, #61bddf, #eac761);
+}
+
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.wr-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.wr-header form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#resetSearch {
+  flex: 0 0 auto;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #3b3535;
+  width: 36px;
+  height: 36px;
+}
+#resetSearch:hover {
+  transition: 0.3s;
+  color: red;
+}
+
+.wr-logo {
+  width: 95px;
+  height: 80px;
+  margin-right: 6%;
+  flex: 0 0 auto;
+}
+.wr-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main {
+  flex: 1 0 auto;
+  background-color: #f7f7f7;
+}
+
+ul {
+  padding-top: 130px;
+}
+
+li {
+  padding: 10px 30px;
+  background: linear-gradient(to left, #efefef 0%, #fff, #efefef);
+  border: 2px solid #c0c0c0;
+  color: #506a6b;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+li.item-ative {
+  cursor: default;
+}
+
+.inform {
+  padding-top: 10px;
+}
+.inform button {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 6px 6px 6px 14px;
+  text-align: left;
+  font-size: inherit;
+  margin-bottom: 10px;
+  background-color: #bdaaaa;
+  border-radius: 10px;
+}
+.inform button::after {
+  position: absolute;
+  top: 6px;
+  right: 40px;
+  content: url(../img/svg/arrow-up.svg);
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.inform button:active {
+  opacity: 0.7;
+}
+.inform button.open {
+  margin-bottom: 0;
+}
+.inform button.open::after {
+  transform: rotateX(180deg);
+}
+.inform div {
+  height: 0;
+  overflow: hidden;
+  transition-property: padding-top, padding-bottom, opacity;
+  transition-duration: 0.4s, 0.1s;
+  transition-timing-function: linear, linear;
+  opacity: 0;
+}
+.inform div p {
+  margin-bottom: 10px;
+}
+.inform div p:last-child {
+  margin-bottom: 0;
+}
+.inform div.open-content-tab {
+  height: min-content;
+  padding: 16px;
+  opacity: 1;
+}
+.inform .dosageInput {
+  width: 60px;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #b1b0b0;
+}
+.inform .dosageInput:focus {
+  border: 1px solid #000;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #61bddf, #eac761);
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 30px;
+  bottom: 5%;
+  height: 60px;
+  width: 60px;
+  font-size: 22px;
+  border-radius: 50%;
+  background-color: #1f1e1e;
+  color: #f2ebeb;
+  cursor: pointer;
+}
+
+.show-message {
+  margin-top: 120px;
+}
+.show-message div {
+  position: relative;
+  margin-bottom: 14px;
+}
+.show-message input {
+  border: 1px solid #b1b0b0;
+}
+.show-message input:focus {
+  border: 1px solid #000;
+}
+.show-message button {
+  display: block;
+  width: 100%;
+}
+.show-message .check-message {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 47%;
+  right: 30px;
+  height: 25px;
+  width: 25px;
+  font-size: 16px;
+  border-radius: 50%;
+  color: #efefef;
+}
+.show-message .check-input {
+  background-color: #37c200;
+}
+.show-message .check-input.active {
+  display: flex;
+}
+.show-message .cross-input {
+  background-color: #f80606;
+}
+.show-message .cross-input.active {
+  display: flex;
+}
+.show-message textarea {
+  height: 160px;
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  resize: none;
+  border: 1px solid #b1b0b0;
+}
+.show-message textarea:focus {
+  border: 1px solid #000;
+}
+.modal-wr {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+}
+.modal-wr .modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  background-color: #f7f7f7;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 55;
+}
+.modal-wr .modal p {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.error p {
+  font-size: 30px;
+}
+
+@media screen and (max-width: 460px) {
+  .page-container {
+    font-size: 16px;
+  }
+
+  .wr-logo {
+    width: 75px;
+    height: 65px;
+  }
+
+  #search {
+    font-size: 16px;
+  }
+
+  ul {
+    padding-top: 108px;
+  }
+
+  footer {
+    height: 46px;
+  }
+  footer p {
+    font-size: 16px;
+  }
+
+  .show-message {
+    margin-top: 110px;
+    margin-bottom: 20px;
+  }
+  .show-message [placeholder] {
+    font-size: 16px;
+  }
+  .show-message textarea {
+    height: 100px;
+  }
+  .show-message div {
+    margin-bottom: 8px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
