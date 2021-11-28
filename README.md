@@ -54,6 +54,8 @@ check restrictions on these drugs. The app has a tool for feedback via email wit
 
 ```html
     cd "api"
+```
+```html
     npm install
 ```
 
