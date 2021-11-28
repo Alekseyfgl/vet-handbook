@@ -45,13 +45,19 @@ Copy link
     https://github.com/Alekseyfgl/vet-handbook.git
 ```
 
-open console  --> paste into console
+Open console  --> paste into console
 
 ```html
     npm start
 ```
 
+open your browser and paste this link
+
+```html
+    http://localhost:5000/
+```
+
 [Back To The Top](#vet-handbook)
 
----
+
 
