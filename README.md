@@ -44,13 +44,13 @@ check restrictions on these drugs. The app has a tool for feedback via email wit
 
 2. Сhoose folder --> Open console  --> paste link into the console
 
-3. Write in the console
+3. Write to the console
 
 ```html
    cd "vet-handbook"
 ```
 
-4. Write in the console
+4. Write to the console
 
 ```html
     cd "api"
@@ -59,7 +59,7 @@ check restrictions on these drugs. The app has a tool for feedback via email wit
     npm install
 ```
 
-5. Write in the console
+5. Write to the console
 
 ```html
     npm start
